@@ -14,5 +14,15 @@
     "plugins":[
         "transform-runtime",
         "react-hot-loader/babel"
-    ]
+    ],
+    "env": {
+        "test" : {
+          "presets": [
+            "babel-preset-react"
+          ],
+          "plugins": [
+            "istanbul"
+          ]
+        }
+      }
 }
