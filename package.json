@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --config=config/webpack.dev.js",
     "test": "mocha tests --require babel-register --recursive",
+    "test:coverage": "nyc mocha tests --recursive",
     "dev": "nodemon --inspect --watch config --watch src/server src/server/main.js"
   },
   "keywords": [],
@@ -59,12 +60,11 @@
       "text-summary"
     ],
     "extension": [
-      ".jsx",
-      ".js"
+      ".jsx"
     ],
     "include": [
-      "source/**/*.js",
-      "source/**/*.jsx"
+      "src/**/*.js",
+      "src/**/*.jsx"
     ],
     "sourceMap": false,
     "instrument": false
